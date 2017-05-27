@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BillHahn/ajax-search-box.git"
+    "url": "git+https://github.com/BillHahn/ajax-search-box-europe.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BillHahn/ajax-search-box/issues"
+    "url": "https://github.com/BillHahn/ajax-search-box-europe/issues"
   },
-  "homepage": "https://github.com/BillHahn/ajax-search-box#readme"
+  "homepage": "https://github.com/BillHahn/ajax-search-box-europe#readme"
 }
