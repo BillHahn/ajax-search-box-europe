@@ -34,9 +34,10 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(req, res) {
-  res.render('index.html');
-  console.log("\nRequest Headers: \n")
-    //console.log(JSON.stringify(req.headers));
+  console.log("\n ----------------------------------- \n")
+  console.log("\n GAE auto-populated Request Headers: \n")
+  console.log("\n ----------------------------------- \n")
+  //console.log(JSON.stringify(req.headers));
   var countryHeader = req.get("X-AppEngine-Country");
   var regionHeader = req.get('X-AppEngine-Region');
   var cityHeader = req.get('X-AppEngine-City');
@@ -49,6 +50,23 @@ app.get('/', function(req, res) {
     "\n Region: " + cityatlongHeader +
     "\n Agent from headers: " + userAgentHeader
   );
+  
+  //Redner index.html and pass location data to it,
+  //from GAE populated html req header info!
+  res.render('index.html', 
+  			{countryinfo: countryHeader,
+  			regioninfo: regionHeader,
+  			cityinfo: cityHeader,
+  			cityatlonginfo: cityatlongHeader}
+  );
+
+/*
+  res.render('index',{users : [
+            { name: 'John' },
+            { name: 'Mike' },
+            { name: 'Samantha' }
+  ]});
+ */
 });
 /*
 request.getHeader("X-AppEngine-Country")
