@@ -41,9 +41,20 @@
        style="cursor:pointer; cursor:hand; border:0"
        />
      </a>
-        <h1>GCP Autocomplete Ajax UI: GAE + Node.js + MySQL Backend!
+        <h1>GCP Autocomplete Ajax UI: GAE + Node.js + SQL Backend!
         </h1>
-        <h3>
+    </div>
+
+  <!-- The Typeahead Input Field on web page bound to Bootstrap Typeahead to query MySQL for autocomplete results. -->
+    <div class="container">
+      <input class="typeahead" type="text" data-provide="typeahead" autocomplete="off" placeholder="Type your Query">
+	  <br>
+      <iframe width="800" height="450" src="https://m.google.com" frameborder="1" allowfullscreen></iframe>
+      <!-- https://www.youtube.com/embed/0xTyGtu-Ryo?autoplay=1 -->
+      <!-- https://www.youtube.com/embed/0xTyGtu-Ryo?t=0s&loop=1&autoplay=1&rel=0&controls=0 -->
+      <!-- <input class="typeahead" type="text" data-provide="typeahead tt-query" autocomplete="off"> -->
+    </div><!-- /.container -->
+        <br><br><h5>
         <% var noLocationInfoAvailable = "[No Location Info Available! You must not be running in Google Cloud GAE.  You're probably running locally.]"; %>
         <% if (countryinfo) { %>
         [Country:
@@ -58,17 +69,6 @@
         <% } else { %>
         <%= noLocationInfoAvailable %>
         <% }; %>
-      </h3>
-    </div>
-
-  <!-- The Typeahead Input Field on web page bound to Bootstrap Typeahead to query MySQL for autocomplete results. -->
-    <div class="container">
-      <input class="typeahead" type="text" data-provide="typeahead" autocomplete="off" placeholder="Type your Query">
-	  <br>
-      <iframe width="800" height="450" src="https://m.google.com" frameborder="1" allowfullscreen></iframe>
-      <!-- https://www.youtube.com/embed/0xTyGtu-Ryo?autoplay=1 -->
-      <!-- https://www.youtube.com/embed/0xTyGtu-Ryo?t=0s&loop=1&autoplay=1&rel=0&controls=0 -->
-      <!-- <input class="typeahead" type="text" data-provide="typeahead tt-query" autocomplete="off"> -->
-    </div><!-- /.container -->
+      </h5>
   </body>
 </html>
